@@ -6,9 +6,14 @@ def criarTabela():
     cur.execute('DROP TABLE IF EXISTS apimegasena')
 
     comando = '''CREATE TABLE "apimegasena" (
-        data TEXT,
-        resultadoOrdemSorteio TEXT,
-        resultadoListaDezena TEXT
+        data VARCHAR(150),
+        dezena1 TEXT,
+        dezena2 TEXT,
+        dezena3 TEXT,
+        dezena4 TEXT,
+        dezena5 TEXT,
+        dezena6 TEXT,
+        dataProximoConcurso VARCHAR(150)
         )'''
 
     cur.execute(comando)
@@ -25,7 +30,7 @@ def verTabela():
 def inserirInfo():
     con = sql.connect('banco.db')
     cur = con.cursor()
-    cur.execute('insert into apimegasena (data, resultadoOrdemSorteio, resultadoListaDezena) values(?,?,?)', (data, resultadoOrdemSorteio_string, resultadoListaDezena_string))
+    cur.execute('insert into apimegasena (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso) values(?,?,?)', (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso))
     con.commit()
     con.close()
 
