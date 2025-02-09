@@ -27,10 +27,10 @@ def verTabela():
     con.close()
     return dados
 
-def inserirInfo():
+def inserirInfo(data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso):
     con = sql.connect('banco.db')
     cur = con.cursor()
-    cur.execute('insert into apimegasena (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso) values(?,?,?)', (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso))
+    cur.execute('insert into apimegasena (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso) values(?,?,?,?,?,?,?,?)', (data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso))
     con.commit()
     con.close()
 

@@ -16,7 +16,7 @@ def main():
         dataProximoConcurso = dado["dataProximoConcurso"]
 
         dezena1, dezena2, dezena3, dezena4, dezena5, dezena6 = resultadoOrdemSorteio
-        inserirInfo()
+        inserirInfo(data, dezena1, dezena2, dezena3, dezena4, dezena5, dezena6, dataProximoConcurso)
 
     else:
         print('Falha...')
