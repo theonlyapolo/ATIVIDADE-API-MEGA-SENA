@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado da mesasena</title>
 </head>
+<style>
+    body {
+        background-color: lightgreen;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    strong {
+        color: darkred ;
+    }
+</style>
 <body>
-    <h1>💥💥💥💥💥💥💥💥 Resultado da megasena !!!!!!!!!!! 😱😱😱😱😱😱😱</h1>
+    <center>
+    <h1>Resultado da megasena:</h1>
     <br><br>
-    <h2>Data da apuração: {{ data }}</h2>
-    <h2>Resultado em Ordem de Sorteio: {{ dezena1 }}, {{ dezena2 }}, {{ dezena3 }}, {{ dezena4 }}, {{ dezena5 }}, {{ dezena6 }}</h2>
-    <h2>Data do próximo concurso: {{ dataProximoConcurso }}</h2>
+    <h2>Data da apuração: <strong>{{ data }}</strong></h2>
+    <h2>Resultado em Ordem de Sorteio: <strong>{{ dezena1 }}, {{ dezena2 }}, {{ dezena3 }}, {{ dezena4 }}, {{ dezena5 }}, {{ dezena6 }}</strong></h2>
+    <h2>Data do próximo concurso: <strong>{{ dataProximoConcurso }}</strong></h2>
+    </center>
 </body>
 </html>
